@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const countdownEl = document.getElementById("countdown");
     if (!countdownEl) return;
 
-    const DURATION_MS = 2 * 60 * 60 * 1000; // 2 hours
+    const DURATION_MS = 4 * 60 * 60 * 1000 + 38 * 60 * 1000; // 4 hours 38 minutes
     const STORAGE_KEY = "publish_end_time_v1";
 
     let endTime = Number(localStorage.getItem(STORAGE_KEY));
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
             `${String(seconds).padStart(2, '0')}`;
     }
 
-    updateCountdown();                 // immediate update
+    updateCountdown();                 
     const timer = setInterval(updateCountdown, 1000);
 
 });
